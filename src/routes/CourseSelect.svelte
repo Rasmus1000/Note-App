@@ -1,28 +1,39 @@
 <script>
-// @ts-nocheck
-    let courses = [
-        {nimi: "Jeppis", id: 0},
-        {nimi: "Jebulis", id: 1},
-        {nimi: "Ok", id: 2}
-    ];
 
-    const allOption = { nimi: "All", id: null };
-    courses = [allOption, ...courses];
+    import { courses } from '$lib/courseStore.js'
 
-    let selectedCourse = allOption;
+    // @ts-ignore
+    /**
+	 * @type {null | undefined}
+	 */
 
+    let selectedCourse;
+
+    // @ts-ignore
     function handleChange(event) {
     const selectedIndex = event.target.selectedIndex;
-    selectedCourse = courses[selectedIndex];
+    // @ts-ignore
+    selectedCourse = $courses[selectedIndex];
   }
 </script>
 
+<!-- Luo alasvetovalikko -->
 <select on:change={handleChange}>
-    {#each courses as course (course.id)}
-      <option value={course.id}>{course.nimi}</option>
-    {/each}
+  {#each $courses as course}
+    <option value={course.nimi}>{course.nimi}</option>
+  {/each}
 </select>
 
-{#if selectedCourse !== null}
-  <p>Valittu henkilö: {selectedCourse.nimi}, ID: {selectedCourse.id}</p>
+<!-- Näytä valittu objekti -->
+{#if selectedCourse !== undefined && selectedCourse !== null}
+  <p>Valittu objekti: {selectedCourse}</p>
 {/if}
+{#if selectedCourse === null}
+  <p>Valittu objekti: All</p>
+{/if}
+
+<style>
+  select{
+    margin-bottom: 20px;
+  }
+</style>
