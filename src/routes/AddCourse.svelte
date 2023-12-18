@@ -4,7 +4,7 @@
     let name = '';
 
     function saveCourse(){
-        let course = {name};
+        let course = name;
         courses.add(course)
         name = ''
     }

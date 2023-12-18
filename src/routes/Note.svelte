@@ -7,7 +7,7 @@
 </script>
 
 <div>
-    <h4>{timestamp} {course} (id)</h4>
+    <h4>{new Date(timestamp).toLocaleDateString()} {course.nimi} (id {course.id})</h4>
     <p>{text}</p>
 </div>
 

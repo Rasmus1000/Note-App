@@ -1,5 +1,6 @@
 [
-    {"text": "Console.log() log messageja", "timestamp": "2023-12-17T13:11:13", "course": "JavaScript"},
-    {"text": "Käytä aina git status", "timestamp": "2023-12-17T13:11:13", "course": "Versionhallinta"},
-    {"text": "Prata du svenska", "timestamp": "2023-12-17T13:11:13", "course": "Ruotsi"}
+    {"id": 0, "text": "Console.log() log messageja", "timestamp": "2023-12-17T13:11:13", "course": {"nimi": "JavaScript", "id": 0}},
+    {"id": 1, "text": "Käytä aina git status", "timestamp": "2023-12-17T13:11:13", "course": {"nimi": "Versionhallinta", "id": 1}},
+    {"id": 2, "text": "Prata du svenska", "timestamp": "2023-12-17T13:11:13", "course": {"nimi": "Ruotsi", "id": 2}},
+    {"id": 3, "text": "new Date() luo uuden date objektin", "timestamp": "2023-12-17T13:11:13", "course": {"nimi": "JavaScript", "id": 0}}
 ]
