@@ -11,7 +11,7 @@ function createCourses(){
         update((courses) => {
             let id = courses.length - 1;
             return [...courses, {nimi: course, id: id}]
-        })
+        });
     }
 
     return {

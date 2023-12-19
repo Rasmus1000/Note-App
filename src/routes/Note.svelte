@@ -1,13 +1,14 @@
 <script>
 // @ts-nocheck
 
+    export let nid;
     export let text;
     export let timestamp;
     export let course;
 </script>
 
 <div>
-    <h4>{new Date(timestamp).toLocaleDateString()} {course.nimi} (id {course.id})</h4>
+    <h4>{new Date(timestamp).toLocaleDateString()} {course.nimi} (id {course.id}) {nid}</h4>
     <p>{text}</p>
 </div>
 
