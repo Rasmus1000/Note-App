@@ -15,11 +15,9 @@
 <style>
     div{
         border: 2px solid black;
-        border-radius: 15px;
+        border-radius: 10px;
         margin-bottom: 10px;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        max-width: 500px;
+        max-width: 596px;
     }
     h4{
         margin: 0;
