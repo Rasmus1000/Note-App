@@ -12,7 +12,7 @@
     let selectedCourse = 0;
 
     // @ts-ignore
-    function handleChange(event) {
+    function changeHandler(event) {
         const selectedIndex = event.target.selectedIndex;
         // @ts-ignore
         selectedCourse = selectedIndex;
@@ -26,7 +26,7 @@
 </script>
 
 <!-- Luo alasvetovalikko -->
-<select on:change={handleChange}>
+<select on:change={changeHandler}>
   {#each $courses as course}
     <option value={course.id}>{course.nimi}</option>
   {/each}
