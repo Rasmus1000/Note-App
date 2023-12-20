@@ -1,4 +1,5 @@
 <script>
+    import { onDestroy } from 'svelte';
     import { courses } from '$lib/courseStore.js';
     import { selectedId } from "$lib/selectStore";
 
@@ -12,12 +13,16 @@
 
     // @ts-ignore
     function handleChange(event) {
-      const selectedIndex = event.target.selectedIndex;
-      // @ts-ignore
-      selectedCourse = selectedIndex;
-      // @ts-ignore
-      selectedId.update(prev => prev = selectedCourse); 
-  }
+        const selectedIndex = event.target.selectedIndex;
+        // @ts-ignore
+        selectedCourse = selectedIndex;
+        // @ts-ignore
+        selectedId.update(prev => prev = selectedCourse); 
+    } 
+
+    onDestroy(() => {
+        selectedId.set(null)
+    });
 </script>
 
 <!-- Luo alasvetovalikko -->

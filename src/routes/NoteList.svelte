@@ -1,6 +1,6 @@
 <script>
 // @ts-nocheck
-
+    import { slide } from 'svelte/transition';
 	import Note from "./Note.svelte";
     //import notes from '$lib/notes.json'
     import { notes } from "$lib/noteStore.js"
@@ -9,6 +9,10 @@
 
     let idx = null;
     selectedId.subscribe((val) => idx = val);
+
+    function deleteNote(nid){
+        notes.delete(nid);
+    }
 
     //let notes = [
     //    {text: "Console.log() log messageja", timestamp: new Date().toLocaleDateString(), course: 'JavaScript'},
@@ -20,14 +24,36 @@
 
 {#each $notes as note}
     {#if note.course.id === $courses[idx]?.id || $courses[idx]?.id === null}
-        <Note {...note}/>
+        <div transition:slide>
+            <Note {...note}/>
+            <button on:click={deleteNote(note.nid)}>&times;</button>
+        </div>
     {/if}
 {/each}
 
-
-
-
-
-
-
-
+<style>
+    div{
+        display: grid;
+        grid-template-columns: 1fr max-content;
+        position: relative;
+    }
+    button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        height: 20px;
+        width: 20px;
+        font-size: 25px;
+        border-radius: 10px;
+        color: red;
+        background-color: #dddddd;
+        cursor: pointer;
+        position: absolute;;
+        right: 5px;
+        top: 5px;
+    }
+    button:hover{
+        border: solid 2px rgb(10, 110, 110);
+    }
+</style>

@@ -2,6 +2,7 @@
 // @ts-nocheck
 
     import { onMount } from "svelte";
+    import { onDestroy } from "svelte";
 	import CourseSelect from "../CourseSelect.svelte";
     import { selectedId } from "$lib/selectStore.js";
     import { courses } from "$lib/courseStore.js";
@@ -43,6 +44,9 @@
         id++;
         text = "";
     }
+    onDestroy(() => {
+            selectedId.set(null)
+    });
 </script>
 
 <h2>Create Notes For:</h2>
@@ -71,7 +75,7 @@
         resize: none;
         margin: 0 50px 0 50px;
         width: 586px;
-        max-width: 586px;
+        max-width: 95%;
         background-color: rgb(230, 230, 230);
         color: #444444;
         border-radius: 10px;
@@ -117,5 +121,6 @@
     }
     #saveButton:enabled:hover{
         border: transparent;
+        cursor: pointer;
     }
 </style>

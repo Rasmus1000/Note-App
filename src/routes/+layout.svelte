@@ -8,6 +8,7 @@
         <a href="/notes"><button>Create Notes</button></a>
 
     </nav>
+    <hr>
     <slot />
 </div>
 
@@ -18,6 +19,10 @@
         display: flex;
         justify-content: center;
         margin-top: 0;
+    }
+    hr{
+        height: 2px;
+        background-color: #444444;
     }
     span{
         color: rgb(10, 110, 110);
@@ -39,6 +44,7 @@
         border: solid 2px white;
         margin: 0 10px 0 10px;
         color: white;
+        cursor: pointer;
     }
     button:disabled{
         color: #aaaaaa;
