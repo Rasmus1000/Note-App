@@ -3,8 +3,6 @@
     import { courses } from '$lib/courseStore.js';
     import { selectedId } from "$lib/selectStore";
 
-
-
     // @ts-ignore
     /**
 	 * @type {number | null | undefined}
@@ -25,14 +23,13 @@
     });
 </script>
 
-<!-- Luo alasvetovalikko -->
+<!-- Alasvetovalikko -->
 <select on:change={changeHandler}>
   {#each $courses as course}
     <option value={course.id}>{course.nimi}</option>
   {/each}
 </select>
 
-<!-- Näytä valittu objekti -->
 {#if selectedCourse !== undefined && selectedCourse !== null}
   <p>Valittu objekti: {$courses[selectedCourse].nimi} {$courses[selectedCourse].id}</p>
 {/if}

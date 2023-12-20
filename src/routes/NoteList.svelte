@@ -2,7 +2,6 @@
 // @ts-nocheck
     import { slide } from 'svelte/transition';
 	import Note from "./Note.svelte";
-    //import notes from '$lib/notes.json'
     import { notes } from "$lib/noteStore.js"
     import { courses } from "$lib/courseStore.js";
     import { selectedId } from "$lib/selectStore.js";
@@ -13,12 +12,6 @@
     function deleteNote(nid){
         notes.delete(nid);
     }
-
-    //let notes = [
-    //    {text: "Console.log() log messageja", timestamp: new Date().toLocaleDateString(), course: 'JavaScript'},
-    //    {text: "Käytä aina git status", timestamp: new Date().toLocaleDateString(), course: 'Versionhallinta'},
-    //    {text: "Prata du svenska", timestamp: new Date().toLocaleDateString(), course: 'Ruotsi'}
-    //];
 
 </script>
 
