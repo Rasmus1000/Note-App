@@ -16,6 +16,7 @@
         notesHeading = document.getElementById('notesHeading');
     });
 
+    let id = 0;
     // @ts-ignore
     let text;
     let listNotes = [];
@@ -38,7 +39,8 @@
         let note = { text, timestamp, course };
 
         notes.add(note);
-        listNotes = [...listNotes, text];
+        listNotes = [...listNotes, {id, text}];
+        id++;
         text = "";
     }
 </script>
@@ -51,20 +53,23 @@
 
 <textarea rows="10" placeholder=" Write your notes here..." bind:value={text}/><br>
 <button id="saveButton" disabled={!text || $courses[idx]?.id == null} on:click={saveNote}>Save</button>
+<div style="clear: both;"></div>
 
 <h4 id="notesHeading">Notes from this session:</h4>
 
 {#if listNotes}
-    {#each listNotes as note (note)}
+    {#each listNotes as {id, text} (id)}
     <div id="note">
-        <p>{note}</p>
+        <p>{text}</p>
     </div>
     {/each}
 {/if}
+<div style="clear: both;"></div>
 
 <style>
     textarea {
         resize: none;
+        margin: 0 50px 0 50px;
         width: 586px;
         max-width: 586px;
         background-color: rgb(230, 230, 230);
@@ -77,10 +82,17 @@
         padding: 5px;
         margin: 0;
     }
+    h2, h4, #select{
+        margin-left: 50px;
+    }
+    h4{
+        margin-top: 0;
+    }
     div#note{
         border: 2px solid black;
         border-radius: 10px;
         margin-bottom: 10px;
+        margin-left: 50px;
         max-width: 596px;
     }
     #notesHeading{
@@ -96,6 +108,9 @@
         border-radius: 10px;
         border: solid 2px white;
         color: white;
+        margin-right: 50px;
+        margin-bottom: 10px;
+        float: right;
     }
     #saveButton:disabled{
         color: #aaaaaa;

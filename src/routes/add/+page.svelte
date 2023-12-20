@@ -2,6 +2,13 @@
 	import AddCourse from "../AddCourse.svelte";
 
 </script>
-<h2>Add Courses</h2>
+<div>
+	<h2>Add Courses</h2>
+	<AddCourse />
+</div>
 
-<AddCourse />
+<style>
+	div{
+		margin-left: 50px;
+	}
+</style>

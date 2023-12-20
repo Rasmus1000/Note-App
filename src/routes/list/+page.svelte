@@ -4,9 +4,18 @@
 
 
 </script>
-<h2>Notes</h2>
+<div>
+	<h2>Notes</h2>
 
-Course Filter: <CourseSelect />
+	Course Filter: <CourseSelect />
 
-<NoteList />
+	<NoteList />
+	<div class="clearfix">&nbsp;</div>
+</div>
 
+
+<style>
+	div{
+		margin-left: 50px;
+	}
+</style>
