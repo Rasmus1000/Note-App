@@ -16,7 +16,27 @@
     }
 </script>
 
-<h2>Main View</h2>
+<div>
+    <h1>Main View</h1>
 
-<p>Courses in system: {$courses.length - 1}</p>
-<p>Notes in system: {$notes.length}</p>
+    <p>Courses in system: <span>{$courses.length - 1}</span></p>
+    <p>Notes in system: <span>{$notes.length}</span></p>
+</div>
+
+<style>
+    div{
+        width: fit-content;
+       margin: auto;
+    }
+    h1{
+        text-align: center;
+    }
+    p{
+        font-size: 25px;
+    }
+    span{
+        font-weight: bold;
+        font-size: 30px;
+        color: rgb(10, 110, 110);
+    }
+</style>
