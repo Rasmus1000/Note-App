@@ -8,6 +8,8 @@
     import { courses } from "$lib/courseStore.js";
     import { notes } from "$lib/noteStore.js";
 
+    export let pageId = 'noteAdd';
+
     let select;
     let nameCourse;
     let notesHeading;
@@ -25,10 +27,10 @@
     let idx = null;
     selectedId.subscribe((val) => idx = val);
     // @ts-ignore
-    $: courseName = $courses[idx]?.nimi;
+    $: courseName = $courses[idx]?.name;
     // @ts-ignore
     $: courseId = $courses[idx]?.id;
-    $: course = {nimi: courseName, id: courseId}
+    $: course = {id: courseId, name: courseName}
 
 
     function saveNote(){
@@ -37,7 +39,7 @@
         notesHeading.style.display = 'block';
         let timestamp = new Date().toISOString();
         // @ts-ignore
-        let note = { text, timestamp, course };
+        let note = { text, course, timestamp };
 
         notes.add(note);
         listNotes = [...listNotes, {id, text}];

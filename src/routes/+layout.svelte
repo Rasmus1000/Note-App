@@ -1,6 +1,7 @@
 <div id="container">
     <div class="clearfix">&nbsp;</div>
     <h1><span>Note</span>App</h1>
+    <hr>
     <nav>
         <a href="/"><button>Main View</button></a>
         <a href="/add"><button>Add Courses</button></a>

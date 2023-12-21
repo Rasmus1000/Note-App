@@ -9,20 +9,33 @@
     let idx = null;
     selectedId.subscribe((val) => idx = val);
 
-    function deleteNote(nid){
-        notes.delete(nid);
+    $: found = $notes.filter((n) => n.course.id === $courses[idx]?.id || $courses[idx]?.id === null);
+
+    function deleteNote(id){
+        notes.delete(id);
     }
 
 </script>
 
-{#each $notes as note}
+<!--{#each $notes as note}
     {#if note.course.id === $courses[idx]?.id || $courses[idx]?.id === null}
         <div transition:slide>
             <Note {...note}/>
-            <button on:click={deleteNote(note.nid)}>&times;</button>
+            <button on:click={deleteNote(note.id)}>&times;</button>
         </div>
     {/if}
-{/each}
+{/each}-->
+
+{#if found.length > 0}
+    {#each found as note}
+        <div transition:slide>
+            <Note {...note}/>
+            <button on:click={deleteNote(note.id)}>&times;</button>
+        </div>
+    {/each}
+{:else}
+    <p>No notes found!</p>
+{/if}
 
 <style>
     div{

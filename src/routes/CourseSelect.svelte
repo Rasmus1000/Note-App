@@ -1,4 +1,5 @@
 <script>
+    import { onMount } from 'svelte';
     import { onDestroy } from 'svelte';
     import { courses } from '$lib/courseStore.js';
     import { selectedId } from "$lib/selectStore";
@@ -8,6 +9,11 @@
 	 * @type {number | null | undefined}
 	 */
     let selectedCourse = 0;
+
+    onMount(() => {
+        selectedId.update(prev => prev = selectedCourse);
+    });
+
 
     // @ts-ignore
     function changeHandler(event) {
@@ -26,16 +32,9 @@
 <!-- Alasvetovalikko -->
 <select on:change={changeHandler}>
   {#each $courses as course}
-    <option value={course.id}>{course.nimi}</option>
+    <option value={course.id}>{course.name}</option>
   {/each}
 </select>
-
-{#if selectedCourse !== undefined && selectedCourse !== null}
-  <p>Valittu objekti: {$courses[selectedCourse].nimi} {$courses[selectedCourse].id}</p>
-{/if}
-{#if selectedCourse === null || selectedCourse === undefined}
-  <p>Valittu objekti: All</p>
-{/if}
 
 <style>
   select{

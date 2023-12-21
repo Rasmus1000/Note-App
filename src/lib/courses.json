@@ -1,7 +1,7 @@
 [
-    {"nimi": "All", "id": null},
-    {"nimi": "JavaScript", "id": 0},
-    {"nimi": "Versionhallinta", "id": 1},
-    {"nimi": "Ruotsi", "id": 2},
-    {"nimi": "Jeppis", "id": 3}
+    {"id": null, "name": "All"},
+    {"id": 0, "name": "versionhallinta"},
+    {"id": 1, "name": "java"},
+    {"id": 2, "name": "ruotsi"},
+    {"id": 3, "name": "ohjelmointi 1"}
 ]

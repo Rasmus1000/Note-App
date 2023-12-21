@@ -1,6 +1,6 @@
 [
-    {"nid": 0, "text": "Console.log() log messageja", "timestamp": "2023-12-17T13:11:13", "course": {"nimi": "JavaScript", "id": 0}},
-    {"nid": 1, "text": "Käytä aina git status", "timestamp": "2023-12-17T13:11:13", "course": {"nimi": "Versionhallinta", "id": 1}},
-    {"nid": 2, "text": "Prata du svenska", "timestamp": "2023-12-17T13:11:13", "course": {"nimi": "Ruotsi", "id": 2}},
-    {"nid": 3, "text": "new Date() luo uuden date objektin", "timestamp": "2023-12-17T13:11:13", "course": {"nimi": "JavaScript", "id": 0}}
+    {"nid": 0, "text": "Console.log() log messageja", "course": {"id": 0, "name": "versionhallinta"}, "timestamp": "2023-12-17T13:11:13"},
+    {"nid": 1, "text": "Käytä aina git status", "course": {"id": 1, "name": "java"}, "timestamp": "2023-12-17T13:11:13"},
+    {"nid": 2, "text": "Prata du svenska", "course": {"id": 2, "name": "ruotsi"}, "timestamp": "2023-12-17T13:11:13"},
+    {"nid": 3, "text": "new Date() luo uuden date objektin", "course": {"id": 0, "name": "ohjelmointi"}, "timestamp": "2023-12-17T13:11:13"}
 ]
