@@ -1,8 +1,6 @@
 <script>
 	import CourseSelect from "../CourseSelect.svelte";
 	import NoteList from "../NoteList.svelte";
-
-	export let pageId = 'noteList';
 </script>
 <div>
 	<h2>Notes</h2>

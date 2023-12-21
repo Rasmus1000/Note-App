@@ -1,14 +1,11 @@
 <script>
 // @ts-nocheck
-
     import { onMount } from "svelte";
     import { onDestroy } from "svelte";
 	import CourseSelect from "../CourseSelect.svelte";
     import { selectedId } from "$lib/selectStore.js";
     import { courses } from "$lib/courseStore.js";
     import { notes } from "$lib/noteStore.js";
-
-    export let pageId = 'noteAdd';
 
     let select;
     let nameCourse;
