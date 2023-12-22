@@ -12,6 +12,7 @@
         courses.populate(data.courses)
     }
 
+    //Varmista että data haetaan vain ensimmäisellä kerralla
     if ($notes.length === 0 && !fetched){
         notes.populate(data.notes)
         fetchedStatus.set({fetched: true});

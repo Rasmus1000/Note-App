@@ -1,6 +1,5 @@
 // @ts-nocheck
 import { writable } from 'svelte/store';
-//import og_courses from '$lib/courses.json'
 
 let chooseAll ={"id": null, "name": "All"};
 
@@ -16,9 +15,7 @@ function createCourses(){
 
     return {
         subscribe,
-        //add: (course) => update((courses) => [...courses, course]),
         add: add_course,
-        reset: () => set([]),
         populate: (data) => set([chooseAll, ...data])
     }
 }

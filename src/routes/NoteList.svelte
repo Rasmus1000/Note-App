@@ -9,6 +9,7 @@
     let idx = null;
     selectedId.subscribe((val) => idx = val);
 
+    //Filtteri toiminta
     $: found = $notes.filter((n) => n.course.id === $courses[idx]?.id || $courses[idx]?.id === null);
 
     function deleteNote(id){
@@ -17,15 +18,7 @@
     
 </script>
 
-<!--{#each $notes as note}
-    {#if note.course.id === $courses[idx]?.id || $courses[idx]?.id === null}
-        <div transition:slide>
-            <Note {...note}/>
-            <button on:click={deleteNote(note.id)}>&times;</button>
-        </div>
-    {/if}
-{/each}-->
-
+<!-- Luodaan lista -->
 {#if found.length > 0}
     {#each found as note (note.id)}
         <div transition:slide>

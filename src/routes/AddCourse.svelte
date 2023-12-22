@@ -14,6 +14,7 @@
 
     let prev_name = '';
 
+    //Kurssin tallennus
     function saveCourse(){
         let course = name;
         courses.add(course)

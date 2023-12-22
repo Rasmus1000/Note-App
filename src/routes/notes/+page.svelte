@@ -17,25 +17,21 @@
     });
 
     let id = 0;
-    // @ts-ignore
     let text;
     let listNotes = [];
-    // @ts-ignore
     let idx = null;
     selectedId.subscribe((val) => idx = val);
-    // @ts-ignore
     $: courseName = $courses[idx]?.name;
-    // @ts-ignore
     $: courseId = $courses[idx]?.id;
     $: course = {id: courseId, name: courseName}
 
 
+    // Tallenna muistiinpano
     function saveNote(){
         select.style.display = 'none';
         nameCourse.style.display = 'block';
         notesHeading.style.display = 'block';
         let timestamp = new Date().toISOString();
-        // @ts-ignore
         let note = { text, course, timestamp };
 
         notes.add(note);

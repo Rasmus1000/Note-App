@@ -2,6 +2,7 @@
 	import CourseSelect from "../CourseSelect.svelte";
 	import NoteList from "../NoteList.svelte";
 </script>
+
 <div>
 	<h2>Notes</h2>
 

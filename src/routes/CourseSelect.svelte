@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
     import { onMount } from 'svelte';
     import { onDestroy } from 'svelte';
     import { courses } from '$lib/courseStore.js';
@@ -14,13 +16,9 @@
         selectedId.update(prev => prev = selectedCourse);
     });
 
-
-    // @ts-ignore
     function changeHandler(event) {
         const selectedIndex = event.target.selectedIndex;
-        // @ts-ignore
         selectedCourse = selectedIndex;
-        // @ts-ignore
         selectedId.update(prev => prev = selectedCourse); 
     } 
 
