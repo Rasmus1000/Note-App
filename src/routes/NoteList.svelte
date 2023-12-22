@@ -14,7 +14,7 @@
     function deleteNote(id){
         notes.delete(id);
     }
-
+    
 </script>
 
 <!--{#each $notes as note}
@@ -27,7 +27,7 @@
 {/each}-->
 
 {#if found.length > 0}
-    {#each found as note}
+    {#each found as note (note.id)}
         <div transition:slide>
             <Note {...note}/>
             <button title="Delete Note" on:click={deleteNote(note.id)}>&times;</button>
