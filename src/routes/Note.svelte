@@ -1,5 +1,6 @@
 <script>
 // @ts-nocheck
+    export let id;
     export let text;
     export let timestamp;
     export let course;

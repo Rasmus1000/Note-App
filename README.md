@@ -38,6 +38,6 @@ Tallennus painike on 'disabled' tilassa kunnes kurssi on valittu ja muistiinpano
 ## Muistiinpanojen listaus ja poisto
 
 Muistiinpanojen listaus tapahtuu 'List Notes' välilehdeltä.\
-valitse 'Course Filter' alasvetovalikosta kurssi jonka muistiinpanot haluat näyttää tai 'All' jos haluat näyttää kaikki muistiinpanot (oletus). \
+valitse 'Course Filter' alasvetovalikosta kurssi jonka muistiinpanot haluat näyttää tai 'All' jos haluat näyttää kaikki muistiinpanot (oletus). Jos muistiinpanoja ei löydy valitulla suodatuksella näkyy teksti: 'No notes found!'. \
 \
 Yksittäisen muistiinpanon poisto tapahtuu klikkaamalla sen muistiinpanon oikeassa yläkulmassa olevasta &times; -painikkeesta.

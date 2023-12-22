@@ -2,6 +2,9 @@
 // @ts-nocheck
     import { courses } from "$lib/courseStore";
     import { notes } from "$lib/noteStore";
+    import { fetchedStatus } from '$lib/fetchStore.js';
+
+    const {fetched} = $fetchedStatus;
 
     export let data;
 
@@ -9,8 +12,9 @@
         courses.populate(data.courses)
     }
 
-    if ($notes.length === 0){
+    if ($notes.length === 0 && !fetched){
         notes.populate(data.notes)
+        fetchedStatus.set({fetched: true});
     }
 </script>
 
@@ -24,7 +28,7 @@
 <style>
     div{
         width: fit-content;
-       margin: auto;
+        margin: auto;
     }
     h1{
         text-align: center;
