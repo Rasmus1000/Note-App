@@ -2,7 +2,7 @@
 import { writable } from 'svelte/store';
 //import og_courses from '$lib/courses.json'
 
-let jeppis ={"id": null, "name": "All"};
+let chooseAll ={"id": null, "name": "All"};
 
 function createCourses(){
     const { subscribe, set, update } = writable([]);
@@ -19,7 +19,7 @@ function createCourses(){
         //add: (course) => update((courses) => [...courses, course]),
         add: add_course,
         reset: () => set([]),
-        populate: (data) => set([jeppis, ...data])
+        populate: (data) => set([chooseAll, ...data])
     }
 }
 

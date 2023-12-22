@@ -19,7 +19,7 @@ npm run dev -- --open
 
 Kurssien lisääminen tapahtuu 'Add Courses' välilehdeltä.
 1. Syötekenttään annetaan haluttu nimi uudelle kurssille.
-2. Painetaan 'Save' painiketta, jolloin syötekentän alapuolelle ilmestyy teksti joka ilmoittaa onnistuneesta kurssin lisäämisestä kertoen samalla kurssin nimen ja ID:n.
+2. Painetaan 'Save' painiketta, jolloin syötekentän alapuolelle ilmestyy hetkeksi teksti joka ilmoittaa onnistuneesta kurssin lisäämisestä kertoen samalla kurssin nimen ja ID:n.
 
 Huom.\
 Tallennus painike on 'disabled' tilassa kunnes syötekenttään on syötetty tekstiä eli siinä on enemmän kuin o merkkiä.

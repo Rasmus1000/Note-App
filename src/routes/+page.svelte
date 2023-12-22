@@ -4,15 +4,13 @@
     import { notes } from "$lib/noteStore";
 
     export let data;
-    let notesLoaded = false;
 
     if ($courses.length === 0){
         courses.populate(data.courses)
     }
 
-    if ($notes.length === 0 && notesLoaded === false){
+    if ($notes.length === 0){
         notes.populate(data.notes)
-        notesLoaded = true;
     }
 </script>
 

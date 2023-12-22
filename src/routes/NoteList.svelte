@@ -30,7 +30,7 @@
     {#each found as note}
         <div transition:slide>
             <Note {...note}/>
-            <button on:click={deleteNote(note.id)}>&times;</button>
+            <button title="Delete Note" on:click={deleteNote(note.id)}>&times;</button>
         </div>
     {/each}
 {:else}
