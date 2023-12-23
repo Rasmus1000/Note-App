@@ -18,6 +18,7 @@
         border-radius: 10px;
         margin-bottom: 10px;
         max-width: 596px;
+        overflow-wrap: break-word;
     }
     h4{
         margin: 0;

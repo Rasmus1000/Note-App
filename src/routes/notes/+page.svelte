@@ -93,6 +93,7 @@
         margin-bottom: 10px;
         margin-left: 50px;
         max-width: 596px;
+        overflow-wrap: break-word;
     }
     #notesHeading{
         display: none;
